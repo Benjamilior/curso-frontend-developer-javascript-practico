@@ -13,6 +13,7 @@
     <img src="./icons/icon_menu.svg" alt="menu" class="menu">
 
     <!-- Nav del lado Izquierdo -->
+
     <div class="navbar-left">
       <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
 
@@ -50,7 +51,7 @@
       </ul>
     </div>
 
-    <!-- Menu desplegable Apretar Email -->
+    <!-- Menu desplegable Al Apretar Email -->
     <div class="desktop-menu inactive" >
         <ul>
           <li>
@@ -68,6 +69,7 @@
       </div>
   </nav>
   <!-- Menu solo se ve en mobile-menu -->
+
   <div class="mobile-menu inactive" >
   <ul>
     <li>
@@ -111,8 +113,10 @@
     </li>
   </ul>
 </div>
+
 <!-- Previsluacion del carrito de compras -->
-<aside class="product-detail inactive">
+
+<aside id="cartcontainer" class="inactive">
   <div class="title-container">
     <img src="./icons/flechita.svg" alt="arrow">
     <p class="title">My order</p>
@@ -159,31 +163,37 @@
   </div>
 </div>
 </aside>
-<!-- Display de productos -->
+<!-- Previsualizacion del carrito de compras como aside -->
+
+<aside id="productdetail" class="inactive">
+  <div class="product-detail-close">
+    <img src="./icons/icon_close.png" alt="close">
+  </div>
+  <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+  <div class="product-infos">
+    <p>$35,00</p>
+    <p>Bike</p>
+    <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+    <button class="primary-button add-to-cart-button">
+      <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+      Add to cart
+    </button>
+  </div>
+</aside>
+
+
+
+
+<!-- Display de productos Colocado con JavaScript-->
 <section class="main-container">
   <div class="cards-container">
 
-    <!-- <div class="product-card">
-      <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-      <div class="product-info">
-        <div>
-          <p>$120,00</p>
-          <p>Bike</p>
-        </div>
-        <figure>
-          <img src="./icons/bt_add_to_cart.svg" alt="">
-        </figure>
-      </div>
     </div> -->
   </div>
 </section>
 
 
 
-
-
-
-
-  <script src="main.js"></script>
+   <script src="main.js"></script>
 </body>
 </html>

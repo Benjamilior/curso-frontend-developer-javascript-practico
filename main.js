@@ -1,14 +1,20 @@
 const navemail = document.querySelector(".navbar-email")
 const desktopMenu = document.querySelector(".desktop-menu")
 const carritodecompras = document.querySelector(".navbar-shopping-cart")
-const asideprevisiluazcion = document.querySelector(".product-detail")
+const asideprevisiluazcion = document.querySelector("#cartcontainer")
 const menuhamburger = document.querySelector(".menu")
 const mobilemenu = document.querySelector(".mobile-menu")
 const cardscontainer = document.querySelector(".cards-container")
+const productdetailclose = document.querySelector(".product-detail-close")
+// const prodcutdetailcloselistener = document.querySelector("")
+
+const productdetail = document.querySelector(".product-card")
+const productdetail2 = document.querySelector("#productdetail")
 
 menuhamburger.addEventListener("click", toggledesktop2)
 navemail.addEventListener("click", toggledesktop)
 carritodecompras.addEventListener("click", toggledesktop3)
+productdetailclose.addEventListener("click", closeproduct)
 
 
 function toggledesktop(){
@@ -54,6 +60,14 @@ productlist.push({
 </div>
 </div> */}
 
+function openproductdetail(){
+  productdetail2.classList.remove("inactive")
+
+}
+function closeproduct(){
+  productdetail2.classList.add("inactive")
+  
+}
 function renderproducts(arr){
   for (product of productlist){
     const productcard = document.createElement("div");
@@ -61,6 +75,7 @@ function renderproducts(arr){
 
     const img = document.createElement("img");
     img.setAttribute("src", "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    img.addEventListener("click", openproductdetail)
 
     const productinfo = document.createElement("div");
     productinfo.classList.add("product-info");
